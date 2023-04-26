@@ -16,6 +16,9 @@ RightButtons=M
 ButtonSpacing=0
 ButtonMarginTop=0
 
+ButtonWidth=19
+ButtonHeight=19
+
 PaddingTop=24
 PaddingLeft=24
 PaddingBottom=24

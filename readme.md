@@ -13,6 +13,9 @@ a continuation of the ubuntu ~17 ambiance theme for kde plasma 5
 		* ubuntu-mono icons
 		* humanity icons
 		* ambiant-mate-dark-orange gtk theme
+	+ and edits the inheritance line, so that they inherit
+		* oxygen/gnome (if installed) -- fewer symbolic icons
+		* breeze-dark (ubuntu-mono-dark only) -- no more black monochrome icons
 	* **NB** i am not good at writing bash scripts. caveat emptor.
 #### manual
 * window decorations

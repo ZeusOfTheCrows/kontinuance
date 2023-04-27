@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # set var "KTEMP" to xdg .cache if exists, else .cache
-if [ -z ${XDG_CACHE_HOME+x} ]; then KTEMP="$HOME/.cache/kontinuance/"; else KTEMP="'$XDG_CACHE_HOME/kontinuance/"; fi
+if [ -z ${XDG_CACHE_HOME+x} ]; \
+	then KTEMP="$HOME/.cache/kontinuance/"; \
+	else KTEMP="'$XDG_CACHE_HOME/kontinuance/"; \
+fi
 
 mkdir  -p ${KTEMP};
 cd  ${KTEMP};
@@ -10,6 +13,13 @@ cd  ${KTEMP};
 # the ~/.themes/ and /.local/share/icons/ folders are chosen because, though inconsistent, they're the default kde locations
 extract_deb () {
 	ar -xv package.deb  && zstd -dq data.tar.zst  && tar -xf data.tar;
+}
+
+improve_inheritance () {
+	sed -i -e "s/Inherits=Humanity-Dark,Adwaita,hicolor/Inherits=Humanity-Dark,oxygen,gnome,breeze-dark,Adwaita,hicolor/" \
+		./usr/share/icons/ubuntu-mono-dark/index.theme;
+	sed -i -e "s/Inherits=Humanity,Adwaita,hicolor/Inherits=Humanity,oxygen,gnome,Adwaita,hicolor/" \
+		./usr/share/icons/ubuntu-mono-light/index.theme;
 }
 
 copy_icons () {
@@ -24,6 +34,8 @@ cleanup () {
 
 process_icons () {
 	extract_deb;
+	wait;
+	improve_inheritance;
 	copy_icons;
 	# wait otherwise bash tries to cleanup before the icons are copied
 	wait;
@@ -54,3 +66,6 @@ cp -r ./usr/share/themes/ ${HOME}/.themes/;
 # fully cleanup
 rm gtk.tar.xz && rm -fr ./usr/;
 cd .. && rmdir kontinuance;
+
+# Inherits=Humanity-Dark,Adwaita,hicolor
+# Inherits=Humanity-Dark,oxygen,gnome,breeze-dark,Adwaita,hicolor

@@ -3,9 +3,23 @@
 a continuation of the ubuntu ~17 ambiance theme for kde plasma 5
 
 ### installation
+#### simple
+* copy all 4 folders to `~/.local/share/`
+* install qtcurve with your system package manager
+	* select qtcurve application style via system settings, and select "configure style"
+	* "kontinuance" should appear in the presets dropdown
+* [optionally] run `install-reccs.sh`
+	* which installs
+		* ubuntu-mono icons
+		* humanity icons
+		* ambiant-mate-dark-orange gtk theme
+	* **NB** i am not good at writing bash scripts. caveat emptor.
+#### manual
 * window decorations
-	* copy the `aurorae/kontinuance/` folder to `.local/share/aurorae/themes`
-	* install the `colours/kontinuance.colors` file via system settings
+	* copy the `aurorae/themes/kontinuance/` folder to `.local/share/aurorae/themes/`
+* colourscheme
+	* install the `color-schemes/kontinuance.colors` file via system settings
+* qtcurve theme
 	* install qtcurve with your system package manager
 		* select qtcurve application style via system settings, and select "configure style"
 		* select import, and choose the file `qtcurve/kontinuance.qtcurve`

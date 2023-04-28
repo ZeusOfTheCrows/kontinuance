@@ -51,8 +51,8 @@ a continuation of the ubuntu ~17 ambiance theme for kde plasma 5
 		* [blender ambiance plasma theme](https://store.kde.org/p/1136954/) (extras.zip) if you don't like transparency
 * icon pack
 	* recommended:
-		* [ubuntu-mono/-dark](https://ubuntu.pkgs.org/18.04/ubuntu-main-amd64/ubuntu-mono_16.10+18.04.20180421.1-0ubuntu1_all.deb.html), which inherits from
-		* [Humanity/-Dark](https://ubuntu.pkgs.org/18.04/ubuntu-main-amd64/humanity-icon-theme_0.6.15_all.deb.html)
+		* [ubuntu-mono/-dark](https://packages.ubuntu.com/bionic/ubuntu-mono), which inherits from
+		* [Humanity/-Dark](https://packages.ubuntu.com/bionic/humanity-icon-theme)
 * light colour scheme
 	* recommended: [ambiance-ISH](https://store.kde.org/p/1001434/) (see second screenshot)
 * gtk theme

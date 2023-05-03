@@ -65,5 +65,4 @@ tar -xvf "gtk.tar.xz" "usr/share/themes/Ambiant-MATE-Dark-Orange/";
 cp -r ./usr/share/themes/ ${HOME}/.themes/;
 
 # fully cleanup
-rm gtk.tar.xz && rm -fr ./usr/;
-cd .. && rmdir kontinuance;
+cd .. && rm -fr ${KTEMP};

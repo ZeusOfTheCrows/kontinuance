@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# set var "KTEMP" to xdg .cache if exists, else .cache
-if [ -z ${XDG_CACHE_HOME+x} ]; \
-	then KTEMP="$HOME/.cache/kontinuance/"; \
-	else KTEMP="'$XDG_CACHE_HOME/kontinuance/"; \
-fi
+# set var "KTEMP" to xdg cache if exists, else .cache
+KTEMP=${XDG_CACHE_HOME:-${HOME}/.cache}/kontinuance
 
 mkdir  -p ${KTEMP};
 cd  ${KTEMP};

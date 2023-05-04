@@ -36,6 +36,8 @@ a continuation of the ubuntu ~17 ambiance theme for kde plasma 5
 ### what it is, what it is
 * window decoration (aurorae) theme
 	* window buttons faithful to the official unity icons
+	* if using a plasma style that doesn't follow colour scheme, use kontinuance-static
+		* it won't blend as well with the windows if using any colourscheme other than kontinuance, however
 * qtcurve application style
 	* which i chose over kvantum as it allows inheriting from standard plasma colours
 	* modified from [blender ambiance](https://www.pling.com/p/1136954) "extras" qtcurve style
